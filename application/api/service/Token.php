@@ -23,6 +23,7 @@ class Token
         $tokenSalt = config('secure.token_salt');
         return md5($randChar . $timestamp . $tokenSalt);
     }
+
     public static function getCurrentTokenVar($key)
     {
         $token =Request::instance()
@@ -51,6 +52,7 @@ class Token
         $uid = self::getCurrentTokenVar('uid');
         return $uid;
     }
+
     public static function needPrimaryScope()
     {
         $scope = self::getCurrentTokenVar('scope');
@@ -96,9 +98,7 @@ class Token
     }
     public static function verifyToken($token)
     {
-
         $exist = Cache::get($token);
-
         if($exist){
             return true;
         }

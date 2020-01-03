@@ -10,6 +10,7 @@
 // +----------------------------------------------------------------------
 
 use think\Route;
+Route::get('api/:version/test/test', 'api/:version.Test/testEx');
 //banner主题接口那个轮播图
 Route::get('api/:version/banner/:id', 'api/:version.Banner/getBanner');
 //国内图

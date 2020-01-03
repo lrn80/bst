@@ -21,7 +21,7 @@ class ExceptionHandler extends Handle
     private $msg;
     private $errorCode;
 
-    public function render(Exception $e)
+    public function render(\Exception $e)
     {
         if ($e instanceof BaseException)
         {

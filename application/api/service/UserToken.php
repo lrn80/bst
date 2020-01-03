@@ -58,21 +58,26 @@ class UserToken extends  Token
                 'errorCode' => $wxResult['errcode']
             ]);
     }
+    //授权/办法令牌
     private function grantToken($wxResult)
     {
-
+        //拿到openid
         $openid = $wxResult['openid'];
+        //在数据库中查找这个openid是否存在
+        //如果不存则为用户新增一条记录
         $user = User::getByOpenID($openid);
+        // 借助微信的openid作为用户标识
+        // 但在系统中的相关查询还是使用自己的uid
         if (!$user)
-            // 借助微信的openid作为用户标识
-            // 但在系统中的相关查询还是使用自己的uid
         {
+            //创建一个新用户
             $uid = $this->newUser($openid);
         }
         else {
             $uid = $user->id;
         }
         $cachedValue = $this->prepareCachedValue($wxResult, $uid);
+        //生成令牌，准备缓存数据，写入缓存
         $token = $this->saveToCache($cachedValue);
         return $token;
     }
