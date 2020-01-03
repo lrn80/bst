@@ -37,14 +37,14 @@
 - 具体实现请查看：http://lrnjy.club/2020/01/02/13-tp5-token/
 ### 实现的接口功能  
 - 首页轮播图以及精品推荐的展示  
-![](http://xy.lrnjy.club/images/bst-1.jpg)
+![](http://xy.lrnjy.club/images/bst-1.png)
 - 分类页面的展示，实现（按朝代，时间）**分类**和**点赞**、**加入书架**的功能。
-![](http://xy.lrnjy.club/images/bst-2.jpg)
+![](http://xy.lrnjy.club/images/bst-2.png)
 - 搜索功能有搜索历史和热门搜索的展示。
-![](http://xy.lrnjy.club/images/bst-3.jpg)
+![](http://xy.lrnjy.club/images/bst-3.png)
 - 个人中心页面展示  
-![](http://xy.lrnjy.club/images/bst-4.jpg)
+![](http://xy.lrnjy.club/images/bst-4.png)
 - 内容页的展示（以互动的方式向用户展示内容）
-![](http://xy.lrnjy.club/images/bst-5.jpg)
+![](http://xy.lrnjy.club/images/bst-5.png)
 ### 结言
 以上就是基本内容了感谢你的阅读🤗。
